@@ -1,7 +1,15 @@
 <html class="large">
 <header>
+	<title>Time Organizer</title>
+	<link rel="shortcut icon" type="image/png" href="icon.ico"/>
+	<!-- Credit to Wwwtyro for his Cryptico library. (https://github.com/wwwtyro/cryptico) -->
+	<script type="text/javascript" src="js/cryptico.js "></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script async defer src="https://apis.google.com/js/api.js" onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
+	<script type="text/javascript">$(document).ready(function() {setTimeout(function() {this.onload=function(){};}, 0);setStep(1);});</script>
 	<script type="text/javascript" src="js/variable_styles.js"></script>
+	<script type="text/javascript" src="js/read_data.js"></script>
+	<script type="text/javascript" src="js/display_data.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style_large.css">
 	<link rel="stylesheet" type="text/css" href="css/style_medium.css">
 	<link rel="stylesheet" type="text/css" href="css/style_small.css">
@@ -10,22 +18,29 @@
 <body>
 	<div id="head">
 		<div id="bounding">
+			<h4>Time Organizer</h4>
 			<a href="http://ConsumerJunk.net">
-			<div id="logo_pair">
-				<h1><</h1>
 				<img src="icon.png">
-				<h1 id="name">HOME</h1>
-			</div>
 			</a>
-			<div id="nav_pair">
-				<h4>Time Organizer</h4>
-			</div>
 		</div>
 	</div>
-	<div class="content">
-		<h1 class="content_header">Time Organizer</h1>
-		<p>This web app was designed and developed by ConsumerJunk, for personal use. If you have any questions about the systems used and their implementation, please feel free to message me on my <a href="https://ConsumerJunk.net/Contact" class="content_link">Contact</a> page and I'll try to explain what I know (Yes, not even I as the developer know all the aspects of what's happening. The <a href="https://en.wiktionary.org/wiki/bodge" class="content_link">bodge</a> is real).</p>
-		<a href="http://localhost:3000"><button>Launch></button></a>
+	<div id="spacer"><p>If you see this I really goofed up the CSS, please tell me about it by <a href="https://www.consumerjunk.net/#Contact">Contacting me</a>. Thank you</p></div>
+	<div id="login">
+		<h4 step="1" class="step_hidden">Please login to TO to continue.</h4>
+		<input step="1" class="step_hidden" type="password" name="password" id="pass" placeholder="password" autocomplete="new-password">
+		<button step="1" class="step_hidden" onclick="login()">Login to TO</button>
+		<button step="2" class="step_hidden" onclick="handleSignInClick()">Login to Google</button>
+		<div step="3" id="tasks">
+<!-- 			<div class="task open_task">
+				<div class="task_header">
+					<h1 class="task_title">World history project</h1>
+					<div class="task_status green"></div>
+					<h1 class="task_timer">1 Day</h1>
+					<h1 class="task_minimize">▼</h1>
+					<p>Make sure to use all of the resource avaliable</p>
+				</div>
+			</div> -->
+		</div>
 	</div>
 </body>
 </html>

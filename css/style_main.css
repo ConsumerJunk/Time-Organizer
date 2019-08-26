@@ -25,56 +25,61 @@ div#head div#bounding {
 	min-height: 8vh;
 }
 
-div#head div#bounding div#logo_pair {
-	cursor: pointer;
-	height: 8vh;
-	font-family: "Bahnschrift";
-	color: white;
+div#spacer {
+	min-height: 150px;
 }
 
-div#head #bounding div#logo_pair h1:first-child {
-	margin-right: 15px;
+*:focus{
+	outline: none;
 }
 
-div#head div#bounding a:visited {
-	color: white;
-	cursor: pointer;
-	height: 8vh;
-	font-family: "Bahnschrift";
-}
-
-
-
-div#head div#bounding div#nav_pair {
-	font-family: "Bahnschrift Light";
-	display: inline-block;
-	float: right;
-	float: right;
-}
-
-div.content button {
-	transition: transform 0.2s, box-shadow 0.2s;
+div#login button {
+	display: block;
+	margin: 0px auto 30px auto;
+	padding: 2px 10px;
+	transition: box-shadow 0.2s, transform 0.2s;
 	transform: scale(1);
-	-webkit-box-shadow: 0px 15px 33px -17px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 15px 33px -17px rgba(0,0,0,0.75);
-	box-shadow: 0px 15px 33px -17px rgba(0,0,0,0.75);
-	min-width: 24%;
-	min-height: 80px;
+	-webkit-box-shadow: 0px 9px 16px -8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 9px 16px -8px rgba(0,0,0,0.75);
+	box-shadow: 0px 9px 16px -8px rgba(0,0,0,0.75);
 	font-family: "Bahnschrift";
-	font-size: 40px;
-	margin-left: 38%;
-	margin-top: 6%;
+	font-size: 30px;
 	background-color: 444463;
 	color: white;
 	border: none;
-	border-radius: 12px;
+	border-radius: 4px;
 	cursor: pointer;
 }
 
-div.content button:hover{
-	transition: transform 0.2s, box-shadow 0.2s;
-	transform: scale(1.2) rotate(-1deg);
-	-webkit-box-shadow: 0px 31px 33px -17px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 31px 33px -17px rgba(0,0,0,0.75);
-	box-shadow: 0px 31px 33px -17px rgba(0,0,0,0.75);
+div#login button:hover{
+	transition: box-shadow 0.2s, transform 0.2s;
+	transform: scale(1.05);
+}
+
+div#login {
+	text-align: center;
+	font-size: 40px;
+}
+
+div#login h4 {
+	margin: 0px;
+	margin-bottom: 25px;
+}
+
+div#login input {
+	margin-bottom: 20px;
+	background-color: rgb(255, 255, 255, 0.8);
+	padding-top: 5px;
+	padding-left: 10px;
+	border-radius: 8px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.step_hidden {
+	display: none !important;
+}
+
+.step_shown {
+	display: auto !important;
 }
